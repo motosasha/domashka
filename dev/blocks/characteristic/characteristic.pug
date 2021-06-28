@@ -5,7 +5,7 @@ mixin characteristic(items)
 		each item in items
 			.characteristic__tile
 				svg.characteristic__img
-					use(xlink:href='/img/svgSprite.svg#icon__' + item.icon)
+					use(xlink:href='img/svgSprite.svg#icon__' + item.icon)
 				p.characteristic__descr!= item.descr
 				if item.info !== ''
 					p.characteristic__info!= item.info

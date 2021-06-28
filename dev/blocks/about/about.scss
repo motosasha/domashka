@@ -5,19 +5,19 @@
 .about {
 	padding-top: 40px;
 	position: relative;
-	background: url("/../../img/bg__organic_transparent.jpg") no-repeat right top -50px;
+	background: url("../img/bg__organic_transparent.jpg") no-repeat right top -50px;
 	background-size: 200% auto;
 	@media (min-width: $screen-sm) {
-		background: url("/../../img/bg__organic_transparent.jpg") no-repeat right top -70px;
+		background: url("../img/bg__organic_transparent.jpg") no-repeat right top -70px;
 		background-size: 150% auto;
 		padding-top: 88px;
 	}
 	@media (min-width: $screen-md) {
-		background: url("/../../img/bg__organic_transparent.jpg") no-repeat center top -14px;
+		background: url("../img/bg__organic_transparent.jpg") no-repeat center top -14px;
 		background-size: 100% auto;
 	}
 	@media (min-width: $screen-lg) {
-		background: url("/../../img/bg__organic_transparent.jpg") no-repeat center top -144px;
+		background: url("../img/bg__organic_transparent.jpg") no-repeat center top -144px;
 		padding-top: 168px;
 	}
 	&__section {

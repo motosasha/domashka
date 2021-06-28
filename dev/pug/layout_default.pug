@@ -1,6 +1,13 @@
 //- Стандартный шаблон страницы
 block variables
 
+- var isDeploy = true
+
+if isDeploy === true
+	- var pageAddress = '/domashka'
+else
+	- var pageAddress = ''
+
 include mixins.pug
 
 doctype html
@@ -17,7 +24,7 @@ html(class='no-js', lang='ru-RU')
 		meta(name='robots', content='index, follow')
 		meta(name='theme-color', content='#000000')
 
-		link(rel='icon', type='image/png', href='/img/favicon/favicon-32x32.png', sizes='32x32')
+		link(rel='icon', type='image/png', href='img/favicon/favicon-32x32.png', sizes='32x32')
 
 		block meta
 			title page title
@@ -45,5 +52,5 @@ html(class='no-js', lang='ru-RU')
 
 		include ../pug/layout_parts_modal.pug
 					
-		script(src='/js/main.js')
+		script(src='js/main.js')
 		block scripts
