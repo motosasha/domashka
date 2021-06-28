@@ -1,0 +1,7 @@
+//- Все примеси в этом файле должны начинаться c имени блока (advantages)
+
+mixin advantages(items)
+	each item in items
+		.advantages__item
+			.advantages__icon
+			p.advantages__text!= item.text

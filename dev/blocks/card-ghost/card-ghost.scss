@@ -1,0 +1,100 @@
+// В этом файле должны быть стили для БЭМ-блока card-ghost, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.card-ghost {
+	border-radius: 32px;
+	border: 2px dashed var(--color-dark-quaternary);
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 22px;
+	position: relative;
+	@media (min-width: $screen-sm) {
+		padding: 30px;
+	}
+	@media (min-width: $screen-md) {
+		padding: 46px;
+	}
+	@media (min-width: $screen-md) {
+		justify-content: center;
+		flex-direction: row;
+	}
+	&__social-icon {
+		flex-shrink: 0;
+		display: none;
+		position: absolute;
+		@media (min-width: $screen-sm) {
+			display: block;
+			height: 60px;
+			width: 60px;
+			right: 32px;
+			top: 32px;
+		}
+		@media (min-width: $screen-md) {
+			right: 46px;
+			top: 46px;
+			position: static;
+			margin-right: 32px;
+		}
+		@media (min-width: $screen-lg) {
+			height: 80px;
+			width: 80px;
+		}
+	}
+	&__content {
+		@media (min-width: $screen-md) {
+			width: 50%;
+		}
+		@media (min-width: $screen-lg) {
+			width: calc(50% - 192px);
+		}
+		& + & {
+			margin-top: 24px;
+			@media (min-width: $screen-md) {
+				margin-top: 0;
+				margin-left: 88px;
+			}
+			@media (min-width: $screen-lg) {
+				margin-left: 144px;
+			}
+		}
+	}
+	&__title {
+		font-family: var(--font-accent);
+		font-size: 24px;
+		font-weight: bold;
+		line-height: 120%;
+		margin: 0;
+		@media (min-width: $screen-sm) {
+			font-size: 36px;
+		}
+		@media (min-width: $screen-lg) {
+			font-size: 40px;
+		}
+	}
+	&__descr {
+		font-size: 18px;
+		font-weight: normal;
+		line-height: 120%;
+		margin: 8px 0 0 0;
+		@media (min-width: $screen-sm) {
+			font-size: 20px;
+		}
+		a {
+			color: var(--color-green);
+			font-weight: 700;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__button {
+		margin-top: 24px;
+		width: 100%;
+		@media (min-width: $screen-nexus) {
+			max-width: 293px;
+		}
+	}
+}

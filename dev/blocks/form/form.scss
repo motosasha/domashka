@@ -1,0 +1,17 @@
+// В этом файле должны быть стили для БЭМ-блока form, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.form {
+	width: 100%;
+	&__grid {
+		display: grid;
+		grid-gap: 16px;
+	}
+	&_card {
+		background: var(--color-white);
+		border-radius: 32px;
+		box-shadow: var(--card-shadow);
+		padding: 32px;
+	}
+}

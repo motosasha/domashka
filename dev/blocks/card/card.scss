@@ -1,0 +1,112 @@
+// В этом файле должны быть стили для БЭМ-блока card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.card {
+	background: var(--color-white);
+	border-radius: 32px;
+	padding: 24px;
+	@media (min-width: $screen-sm) {
+		padding: 32px;
+	}
+	@media (min-width: $screen-md) {
+		padding: 48px;
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		@media (min-width: $screen-md) {
+			flex-direction: row;
+			justify-content: center;
+		}
+	}
+	&__row {
+		display: grid;
+		grid-gap: 16px;
+		@media (min-width: $screen-nexus) {
+			grid-gap: 24px;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (min-width: $screen-md) {
+			display: block;
+		}
+		& + & {
+			border-top: 1px solid var(--color-dark-ninja);
+			margin-top: 24px;
+			padding-top: 23px;
+			@media (min-width: $screen-md) {
+				border: 0;
+				margin-top: 0;
+				padding-top: 0;
+			}
+		}
+	}
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -8px;
+		@media (min-width: $screen-md) {
+			border-left: 1px solid var(--color-dark-ninja);
+			margin-bottom: 0;
+			margin-left: 37px;
+			margin-top: 0;
+			padding-left: 55px;
+		}
+	}
+	&__price {
+		margin: 8px;
+		@media (min-width: $screen-md) {
+			margin: 0;
+		}
+		& + & {
+			@media (min-width: $screen-md) {
+				margin-left: 32px;
+			}
+			@media (min-width: $screen-lg) {
+				margin-left: 80px;
+			}
+		}
+	}
+	&__label {
+		font-size: 16px;
+		font-weight: normal;
+		line-height: 112%;
+		margin: 0;
+		@media (min-width: $screen-sm) {
+			font-size: 18px;
+		}
+	}
+	&__text {
+		color: var(--color-green);
+		font-family: var(--font-accent);
+		font-size: 24px;
+		font-weight: bold;
+		line-height: 100%;
+		margin: 4px 0 0 0;
+		@media (min-width: $screen-sm) {
+			font-size: 36px;
+		}
+		@media (min-width: $screen-lg) {
+			font-size: 40px;
+		}
+	}
+	&__button {
+		justify-self: start;
+		@media (min-width: $screen-nexus) {
+			justify-self: stretch;
+			align-self: end;
+		}
+		@media (min-width: $screen-md) {
+			margin-top: 24px;
+			max-width: 406px;
+		}
+		.card__row:last-of-type & {
+			@media (min-width: $screen-md) {
+				margin-left: 96px;
+			}
+			@media (min-width: $screen-lg) {
+				margin-left: 144px;
+			}
+		}
+	}
+}

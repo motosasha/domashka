@@ -1,0 +1,30 @@
+// В этом файле должны быть стили для БЭМ-блока input, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.input {
+	appearance: none;
+	background: var(--color-white);
+	border-radius: 16px;
+	border: 1px solid var(--color-dark-ninja);
+	box-shadow: var(--input-shadow);
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 100%;
+	outline: none;
+	padding: 13px 19px;
+	width: 100%;
+	max-height: 48px;
+	@media (min-width: $screen-sm) {
+		font-size: 20px;
+	}
+	&::placeholder {
+		color: var(--color-dark-quaternary);
+	}
+	&::-webkit-search-cancel-button {
+		-webkit-appearance: none;
+	}
+	&:focus {
+		border: 1px solid var(--color-green);
+	}
+}

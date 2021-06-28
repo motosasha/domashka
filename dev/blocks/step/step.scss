@@ -1,0 +1,61 @@
+// В этом файле должны быть стили для БЭМ-блока step, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.step {
+	position: relative;
+	&__number {
+		background: linear-gradient(180deg, #02a83a 0%, rgba(2, 168, 58, 0) 100%);
+		color: transparent;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-size: 120px;
+		font-weight: 300;
+		left: -10px;
+		line-height: 100%;
+		margin: 0;
+		position: absolute;
+		top: -80px;
+		@media (min-width: $screen-md) {
+			font-size: 144px;
+			left: -112px;
+			top: -72px;
+		}
+	}
+	&__title {
+		color: var(--color-green);
+		font-size: 20px;
+		font-weight: normal;
+		line-height: 100%;
+		margin: 0;
+		@media (min-width: $screen-sm) {
+			font-size: 24px;
+		}
+	}
+	&__descr {
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 120%;
+		margin: 8px 0 0 0;
+		@media (min-width: $screen-sm) {
+			font-size: 32px;
+			line-height: 100%;
+		}
+	}
+	&__info {
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 125%;
+		margin: 8px 0 0 0;
+		color: var(--color-dark-secondary);
+		@media (min-width: $screen-sm) {
+			font-size: 24px;
+		}
+	}
+	&__form {
+		margin-top: 24px;
+		@media (min-width: $screen-sm) {
+			max-width: 336px;
+		}
+	}
+}

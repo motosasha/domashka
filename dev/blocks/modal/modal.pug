@@ -1,0 +1,27 @@
+//- Все примеси в этом файле должны начинаться c имени блока (modal)
+
+mixin modal(items)
+	each item in items
+		.hystmodal(aria-hidden='true' id= item.id)
+			.hystmodal__wrap
+				.hystmodal__window.modal(role='dialog' aria-modal='true')
+					.modal__header
+						h2.modal__heading!= item.title
+						svg.modal__close(data-hystclose='true')
+							use(xlink:href='/img/svgSprite.svg#icon__cross')
+					.form.modal__form
+						.form__grid
+							.form__field.field
+								label.field__inner
+									.field__label Имя
+									input.field__input.input(type='text' placeholder='Укажите ваше имя' required)
+							.form__field.field
+								label.field__inner
+									.field__label Телефон
+									input.field__input.input(type='tel' placeholder='+7 (___) ___-__-__' data-input-mask required)
+							button.form__button.button.button_white(href='#') Отправить
+					.modal__agreement.agreement
+						| Нажимая кнопку «Отправить» вы соглашаетесь с 
+						a.agreement__link(href='#') Политикой конфиденциальности
+						|  и 
+						a.agreement__link(href='#') Пользовательским соглашением

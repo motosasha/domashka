@@ -1,0 +1,81 @@
+// В этом файле должны быть стили для БЭМ-блока structure, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.structure {
+	overflow-x: hidden;
+	padding-top: 88px;
+	position: relative;
+	@media (min-width: $screen-sm) {
+		padding-top: 144px;
+	}
+	@media (min-width: $screen-md) {
+		padding-top: 160px;
+	}
+	&__heading {
+		margin: 0;
+	}
+	&__descr {
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 133%;
+		margin: 24px 0 0 0;
+		@media (min-width: $screen-sm) {
+			font-size: 24px;
+		}
+	}
+	&__step {
+		margin-top: 106px;
+		&_1 {
+			@media (min-width: $screen-md) {
+				margin-top: 136px;
+			}
+		}
+		&_2 {
+			@media (min-width: $screen-md) {
+				margin-top: 336px;
+			}
+		}
+		&_3 {
+			@media (min-width: $screen-md) {
+				margin-top: 106px;
+			}
+		}
+		&_4 {
+			@media (min-width: $screen-md) {
+				margin-top: 120px;
+			}
+		}
+		&_5 {
+			@media (min-width: $screen-md) {
+				margin-top: 120px;
+			}
+		}
+	}
+	&__bg {
+		height: 888px;
+		width: 888px;
+		z-index: -1;
+		background: #ddeee3;
+		border-radius: 50%;
+		position: absolute;
+		left: 0;
+		&_left {
+			left: 50%;
+			top: 300px;
+			transform: translateX(-900px);
+			@media (min-width: $screen-md) {
+				top: 353px;
+				transform: translateX(-1050px);
+			}
+		}
+		&_right {
+			bottom: 74px;
+			left: 50%;
+			transform: translateX(50px);
+			@media (min-width: $screen-md) {
+				transform: translateX(228px);
+			}
+		}
+	}
+}

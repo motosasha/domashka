@@ -1,0 +1,23 @@
+header.header
+	.header__inner
+		.grid
+			.grid__row
+				.grid__col.grid__col_xs-12.grid__col_md-12
+					.header__grid
+						.header__logo
+							svg
+								use(xlink:href='/img/svgSprite.svg#domashka__logo')
+						.header__nav
+							+main-nav([
+								{link: 'Почему мы?', href: '#advantages'},
+								{link: 'Как мы работаем?', href: '#structure'},
+								{link: 'Кого мы обучаем?', href: '#characteristic'},
+								{link: 'Стоимость', href: '#price'}
+							])
+						.header__buttons
+							a.header__button.button.button_red(data-hystmodal="#contacts") Связаться с нами
+							a.header__button.button.button_green(href='#') Регистрация
+							a.header__button.button.button_white(href='#') Вход
+						.header__menu
+							svg
+								use(xlink:href='/img/svgSprite.svg#icon__menu')

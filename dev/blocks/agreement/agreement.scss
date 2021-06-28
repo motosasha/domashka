@@ -1,0 +1,20 @@
+// В этом файле должны быть стили для БЭМ-блока agreement, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.agreement {
+	color: var(--color-dark-secondary);
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 125%;
+	margin: 0;
+	&__link	{
+		color: var(--color-green);
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+		
+	}
+}

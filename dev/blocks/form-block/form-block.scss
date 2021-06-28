@@ -1,0 +1,77 @@
+// В этом файле должны быть стили для БЭМ-блока form-block, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.form-block {
+	box-shadow: var(--card-shadow);
+	background: var(--color-white);
+	border-radius: 32px;
+	position: relative;
+	z-index: 3;
+	&__inner {
+		padding: 32px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		@media (min-width: $screen-sm) {
+			padding: 48px 56px 56px 56px;
+			align-items: start;
+		}
+		@media (min-width: $screen-md) {
+			align-items: stretch;
+			flex-direction: row;
+		}
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		max-width: 532px;
+	}
+	&__heading {
+		font-family: var(--font-accent);
+		font-weight: bold;
+		font-size: 28px;
+		line-height: 100%;
+		letter-spacing: 0.01em;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		margin: 0;
+		color: var(--color-green);
+		flex: 0 0 auto;
+		@media (min-width: $screen-sm) {
+			font-size: 40px;
+		}
+		@media (min-width: $screen-md) {
+			margin-top: 8px;
+		}
+
+	}
+	&__descr {
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 125%;
+		letter-spacing: 0.01em;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		margin: 16px 0 0 0;
+		flex: 1 1 auto;
+		@media (min-width: $screen-sm) {
+			font-size: 24px;
+		}
+
+	}
+	&__agreement {
+		flex: 0 0 auto;
+		margin-top: 16px;
+	}
+	&__form {
+		margin-top: 32px;
+		@media (min-width: $screen-nexus) {
+			max-width: 300px;
+		}
+		@media (min-width: $screen-md) {
+			margin-top: 0;
+			margin-left: 64px;
+			margin-right: 40px;
+		}
+	}
+}

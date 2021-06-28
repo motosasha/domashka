@@ -1,0 +1,12 @@
+.side-nav
+	.side-nav__menu
+		+main-nav([
+			{link: 'Почему мы?', href: '#advantages'},
+			{link: 'Как мы работаем?', href: '#structure'},
+			{link: 'Кого мы обучаем?', href: '#characteristic'},
+			{link: 'Стоимость', href: '#price'}
+		])
+	.side-nav__buttons
+		a.side-nav__button.button.button_red(href='#' data-hystmodal='#contacts') Связаться с нами
+		a.side-nav__button.button.button_green(href='#') Регистрация
+		a.side-nav__button.button.button_white(href='#') Вход

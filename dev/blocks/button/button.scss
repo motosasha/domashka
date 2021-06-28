@@ -1,0 +1,92 @@
+// В этом файле должны быть стили для БЭМ-блока button, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.button {
+	appearance: none;
+	border-radius: 32px;
+	border: none;
+	box-shadow: var(--button-shadow);
+	cursor: pointer;
+	display: block;
+	font-family: var(--font-accent);
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 125%;
+	outline: none;
+	text-align: center;
+	text-decoration: none;
+	@media (min-width: $screen-md) {
+		font-size: 16px;
+	}
+	&_red {
+		background: var(--color-red);
+		color: var(--color-white);
+		padding: 12px 16px;
+		transition: transform .25s ease;
+		@media (min-width: $screen-md) {
+			padding: 14px 24px;
+		}
+		&:hover {
+			transform: translateY(-2px);
+		}
+	}
+	&_green {
+		background: var(--color-green);
+		color: var(--color-white);
+		padding: 12px 16px;
+		transition: transform .25s ease;
+		@media (min-width: $screen-md) {
+			padding: 14px 24px;
+		}
+		&:hover {
+			transform: translateY(-2px);
+		}
+	}
+	&_white {
+		color: var(--color-dark-primary);
+		background: var(--color-grey-gradient);
+		background-blend-mode: soft-light, normal;
+		background-size: 200% 100%;
+		background-position: 0 0;
+		padding: 12px 16px;
+		transition: background-size .25s ease, background-position .25s ease, transform .25s ease;
+		@media (min-width: $screen-md) {
+			padding: 14px 24px;
+		}
+		&:hover {
+			background-size: 200% 100%;
+			background-position: 100% 0;
+			transform: translateY(-2px);
+		}
+	}
+	&_white-accent {
+		color: var(--color-green);
+		background: var(--color-grey-gradient);
+		background-blend-mode: soft-light, normal;
+		background-size: 200% 100%;
+		background-position: 0 0;
+		padding: 12px 40px;
+		transition: background-size .25s ease, background-position .25s ease, transform .25s ease;
+		@media (min-width: $screen-md) {
+			padding: 14px 48px;
+		}
+		&:hover {
+			background-size: 200% 100%;
+			background-position: 100% 0;
+			transform: translateY(-2px);
+		}
+	}
+	&_green-card {
+		background: var(--color-green);
+		color: var(--color-white);
+		padding: 12px 40px;
+		transition: transform .25s ease;
+		@media (min-width: $screen-md) {
+			padding: 14px 48px;
+		}
+		&:hover {
+			transform: translateY(-2px);
+		}
+	}
+}
