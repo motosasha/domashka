@@ -9,7 +9,7 @@ mixin modal(items)
 						h2.modal__heading!= item.title
 						svg.modal__close(data-hystclose='true')
 							use(xlink:href='img/svgSprite.svg#icon__cross')
-					.form.modal__form
+					form.form.modal__form
 						.form__grid
 							.form__field.field
 								label.field__inner

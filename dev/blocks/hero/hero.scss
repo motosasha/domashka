@@ -1,0 +1,93 @@
+// В этом файле должны быть стили для БЭМ-блока hero, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.hero {
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+	padding: 24px 0 40px;
+	overflow: hidden;
+	width: 100vw;
+	@media (min-width: $screen-md) {
+		padding: 40px 0 80px;
+	}
+	&::after,
+	&::before {
+		background: #ddeee3;
+		border-radius: 50%;
+		display: block;
+		position: absolute;
+		@media (min-width: $screen-md) {
+			content: '';
+		}
+	}
+	&::after {
+		height: 200px;
+		bottom: 360px;
+		left: 50%;
+		transform: translateX(-720px);
+		width: 200px;
+	}
+	&::before {
+		height: 240px;
+		top: 176px;
+		left: 50%;
+		transform: translateX(100px);
+		width: 240px;
+	}
+	&__inner {
+		position: relative;
+		z-index: 2;
+	}
+	&__img {
+		display: block;
+		height: auto;
+		margin: 0 auto;
+		width: 100%;
+		@media (min-width: $screen-md) {
+			height: auto;
+			width: 400px;
+		}
+	}
+	&__title {
+		color: var(--color-red);
+		font-family: var(--font-accent);
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 115%;
+		margin: 40px 0 0;
+		@media (min-width: $screen-nexus) {
+			font-size: 40px;
+		}
+	}
+	
+	&__form {
+		background: #fff;
+		box-shadow: 0 32px 80px -32px rgba(174, 174, 192, 0.4);
+		border-radius: 32px;
+		padding: 24px;
+		margin: 16px auto 0;
+		max-width: 480px;
+		@media (min-width: $screen-nexus) {
+			margin: 0;
+			padding: 40px;
+		}
+	}
+	&__form-heading {
+		font-family: var(--font-accent);
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 128%;
+		letter-spacing: 0.01em;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		margin-bottom: 32px;
+		@media (min-width: $screen-nexus) {
+			font-size: 28px;
+		}
+		span {
+			color: var(--color-green);
+		}
+	}
+	.agreement {
+		margin-top: 48px;
+	}
+}

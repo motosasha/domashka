@@ -26,6 +26,7 @@
 		flex: 0 0 auto;
 		height: 64px;
 		margin-right: 24px;
+		margin-bottom: 16px;
 		width: 64px;
 		@media (min-width: $screen-sm) {
 			height: 60px;
@@ -44,6 +45,10 @@
 	}
 	&__flex {
 		display: flex;
+		flex-direction: column;
+		@media (min-width: $screen-nexus) {
+			flex-direction: row;
+		}
 	}
 	&__content {
 		@media (min-width: $screen-md) {
@@ -51,7 +56,9 @@
 		}
 		& + & {
 			margin-top: 32px;
-			padding-left: 88px;
+			@media (min-width: $screen-nexus) {
+				padding-left: 88px;
+			}
 			@media (min-width: $screen-md) {
 				margin-top: 0;
 				margin-left: 5%;
