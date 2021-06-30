@@ -54,13 +54,7 @@
 	}
 	&__img {
 		width: auto;
-		height: 170px;
-		@media (min-width: $screen-nexus) {
-			height: 190px;
-		}
-		@media (min-width: $screen-md) {
-			height: 216px;
-		}
+		height: 120px;
 	}
 	&__descr {
 		font-weight: 300;

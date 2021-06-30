@@ -89,23 +89,32 @@
 		@media (min-width: $screen-lg) {
 			font-size: 40px;
 		}
+		&_red {
+			color: var(--color-red);
+		}
 	}
 	&__button {
 		justify-self: start;
+		padding-bottom: 18px;
+		padding-top: 18px;
 		@media (min-width: $screen-nexus) {
 			justify-self: stretch;
 			align-self: end;
 		}
 		@media (min-width: $screen-md) {
+			font-size: 18px;
 			margin-top: 24px;
-			max-width: 406px;
+			max-width: 460px;
+			padding-bottom: 18px;
+			padding-top: 18px;
 		}
 		.card__row:last-of-type & {
 			@media (min-width: $screen-md) {
-				margin-left: 96px;
+				margin-left: auto;
+				margin-right: auto;
 			}
 			@media (min-width: $screen-lg) {
-				margin-left: 144px;
+			
 			}
 		}
 	}

@@ -72,7 +72,7 @@ block content
 					.advantages__form
 						+form-block([
 							{
-								heading: 'Звучит отлично, да?',
+								heading: 'Звучит отлично?',
 								descr: 'Не теряй времени и оставляй заявку на бесплатный урок.'
 							}
 						])
@@ -117,18 +117,18 @@ block content
 						{
 							number: '04',
 							title: 'Шаг четвёртый',
-							descr: 'Ребёнок подключается в назначенное время к платформе и выполняет домашку под присмотром преподавателя'
+							descr: 'Ребёнок подключается в назначенное время к платформе и выполняет домашку под присмотром преподавателя'
 						}
 					], 'structure__step structure__step_4')
 			.grid__row
-				.grid__col.grid__col_xs-12.grid__col_md-9.col-offset__md-3.grid__col_lg-9.col-offset__lg-3
+				.grid__col.grid__col_xs-12.grid__col_md-9.col-offset__md-3.grid__col_lg-7.col-offset__lg-3
 					+step([
 						{
 							number: '05',
 							title: 'Шаг пятый',
-							descr: 'После выполнения домашнего задания: родителю в telegram приходит уведомление о том, что урок прошёл и домашка сделана, а также небольшой отчёт об успеваемости ребёнка',
+							descr: 'После выполнения домашнего задания: родителю в telegram приходит уведомление о том, что урок прошёл и домашка сделана, а также небольшой отчёт об успеваемости ребёнка',
 							hasInfo: true,
-							info: 'все ли прошло хорошо, весело, нужно ли подтянуть какую нибудь тему дополнительно и т. д.'
+							info: 'все ли прошло хорошо, весело, нужно ли подтянуть какую нибудь тему дополнительно и т. д.'
 						}
 					], 'structure__step structure__step_5')
 		.structure__bg.structure__bg_left
@@ -201,8 +201,8 @@ block content
 								.card__row
 									.card__free
 										p.card__label Пробный урок
-										p.card__text бесплатно
-									a.card__button.button.button_white-accent(data-hystmodal="#tester") Хочу пробный урок
+										p.card__text.card__text_red бесплатно
+									a.card__button.button.button_red(data-hystmodal="#tester") Хочу пробный урок
 								.card__row
 									.card__items
 										.card__price
@@ -214,15 +214,17 @@ block content
 										.card__price
 											p.card__label 20 дней
 											p.card__text 9 000 ₽
-									a.card__button.button.button_green-card(data-hystmodal="#solution") Решите домашку с моим ребёнком
+									a.card__button.button.button_green-card(data-hystmodal="#solution") Решите домашку с моим ребёнком
 					.price__action
 						.price__card-ghost.card-ghost
-							svg.card-ghost__social-icon
-								use(xlink:href='img/svgSprite.svg#icon__socials_ig')
 							.card-ghost__content
-								h3.card-ghost__title Подписывайся на наш instagram
-								p.card-ghost__descr у нас интересный и нужный контент для родителей
-								a.card-ghost__button.button.button_white-accent(href='https://www.instagram.com/urokiru/' target='_blank') Подписаться
+								.card-ghost__flex
+									svg.card-ghost__social-icon
+										use(xlink:href='img/svgSprite.svg#icon__socials_ig')
+									.card-ghost__inner
+										h3.card-ghost__title Подписывайся на наш instagram
+										p.card-ghost__descr у нас интересный и нужный контент для родителей
+										a.card-ghost__button.button.button_red(href='https://www.instagram.com/urokiru/' target='_blank') Подписаться
 							.card-ghost__content
 								h3.card-ghost__title Подарим 2 урока в подарок
 								p.card-ghost__descr если сделаешь пост у себя в instagram и отметишь нас #[a(href='https://www.instagram.com/urokiru/') @urokiru] с хештегом #[a(href='https://www.instagram.com/explore/tags/urokiru/') #urokiru]
@@ -230,7 +232,7 @@ block content
 						+form-block([
 							{
 								heading: 'Есть сомнения или остались вопросы?',
-								descr: 'Оставляй заявку и мы перезвоним вам в течение 5-ти минут!'
+								descr: 'Оставляй заявку и мы перезвоним вам в течение 5-ти минут!'
 							}
 						])
 		
