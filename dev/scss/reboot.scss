@@ -42,19 +42,18 @@ body {
 	& .open-nav {
 		overflow: hidden;
 	}
-	background: url("../img/bg__organic.svg") no-repeat left top 2400px, #f5f5f5;
-	background-size: 400% auto;
+	background: url("../img/bg__organic.svg") no-repeat center top 3500px, #f5f5f5;
+	background-size: 768px auto;
 	@media (min-width: $screen-sm) {
-		background: url("../img/bg__organic.svg") no-repeat left top 2500px, #f5f5f5;
-		background-size: 200% auto;
+		background: url("../img/bg__organic.svg") no-repeat center top 3800px, #f5f5f5;
+		background-size: 1024px auto;
 	}
 	@media (min-width: $screen-md) {
-		background: url("../img/bg__organic.svg") no-repeat left top 1350px, #f5f5f5;
-		background-size: 165% auto;
+		background: url("../img/bg__organic.svg") no-repeat center top 2500px, #f5f5f5;
+		background-size: 1440px auto;
 	}
 	@media (min-width: $screen-lg) {
-		background: url("../img/bg__organic.svg") no-repeat center top 1600px, #f5f5f5;
-		background-size: 100% auto;
+		background: url("../img/bg__organic.svg") no-repeat center top 2250px, #f5f5f5;
 	}
 }
 
