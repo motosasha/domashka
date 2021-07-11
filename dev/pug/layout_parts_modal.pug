@@ -3,3 +3,11 @@
 	{title: 'Решите домашку с моим ребёнком', id: 'solution'},
 	{title: 'Хочу пробный урок', id: 'tester'}
 ])
+
+.hystmodal(aria-hidden='true' id='thanks')
+	.hystmodal__wrap
+		.hystmodal__window.modal(role='dialog' aria-modal='true')
+			.modal__header
+				h2.modal__heading Спасибо за заявку
+				svg.modal__close(data-hystclose='true')
+					use(xlink:href='img/svgSprite.svg#icon__cross')
