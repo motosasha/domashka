@@ -1,0 +1,57 @@
+// В этом файле должны быть стили для БЭМ-блока cookies-message, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.cookies-message {
+	align-items: center;
+	background: #fff;
+	border-radius: 16px;
+	bottom: 24px;
+	box-shadow: var(--button-shadow);
+	display: flex;
+	flex-wrap: wrap;
+	left: 50%;
+	max-width: 800px;
+	padding: 16px;
+	position: fixed;
+	transform: translateX(-50%);
+	width: 96%;
+	z-index: 99;
+	@media (min-width: $screen-nexus) {
+		border-radius: 48px;
+		flex-wrap: nowrap;
+	}
+	&__inner {
+		align-items: center;
+		display: flex;
+		margin-bottom: 8px;
+		@media (min-width: $screen-nexus) {
+			margin: 0;
+		}
+	}
+	&__icon {
+		flex: 0 0 auto;
+		height: 48px;
+		width: 48px;
+	}
+	&__text {
+		font-size: 14px;
+		margin: 0 16px;
+	}
+	&__link {
+		color: var(--color-green);
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	&__button {
+		font-size: 14px !important;
+		margin-left: 48px;
+		padding: 8px 16px;
+		white-space: nowrap;
+		@media (min-width: $screen-nexus) {
+			margin: 0;
+		}
+	}
+}

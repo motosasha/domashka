@@ -12,7 +12,9 @@
 		<meta name="robots" content="index, follow">
 		<meta name="theme-color" content="#000000">
 		<link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
-		<title>Главная страница</title>
+		<title>Школьная Домашка</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,6 +70,14 @@
 				</header>
 			</div>
 			<div class="page__main">
+				<div class="cookies-message">
+					<div class="cookies-message__inner"><svg class="cookies-message__icon">
+							<use xlink:href="img/svgSprite.svg#icon__cookies"></use>
+						</svg>
+						<div class="cookies-message__text">Продолжая пользоваться сайтом вы соглашаетесь с <a class="cookies-message__link" href="/cookies">условиями использования файлов cookie</a></div>
+					</div>
+					<div class="button button_red cookies-message__button">Принять условия</div>
+				</div>
 				<section class="hero">
 					<div class="hero__inner">
 						<div class="grid">
@@ -86,7 +96,7 @@
 													<div class="field__label">Телефон</div><input class="field__input input" type="tel" placeholder="+7 (___) ___-__-__" data-input-mask required>
 												</label></div><button class="form__button button button_white" href="#">Отправить</button>
 										</form>
-										<div class="agreement">Нажимая кнопку «Отправить» вы соглашаетесь с <a class="agreement__link" href="#">Политикой конфиденциальности</a> и <a class="agreement__link" href="#">Пользовательским соглашением</a></div>
+										<div class="agreement">Нажимая кнопку «Отправить» вы соглашаетесь с <a class="agreement__link" href="/legal/policy" target="_blank">Политикой конфиденциальности</a> и <a class="agreement__link" href="/soglashenie" target="_blank">Пользовательским соглашением</a></div>
 									</div>
 								</div>
 							</div>
@@ -140,7 +150,7 @@
 											<div class="form-block__content">
 												<h3 class="form-block__heading">Хотите так же?</h3>
 												<p class="form-block__descr">Скорее заполняй заявку на пробное бесплатное выполнение домашки!</p>
-												<p class="form-block__agreement agreement">Нажимая кнопку «Отправить» вы соглашаетесь<br/> с <a class="agreement__link" href="#" target="_blank">Политикой конфиденциальности</a> и <a class="agreement__link" href="#" target="_blank">Пользовательским соглашением</a></p>
+												<p class="form-block__agreement agreement">Нажимая кнопку «Отправить» вы соглашаетесь<br/> с <a class="agreement__link" href="/legal/policy" target="_blank">Политикой конфиденциальности</a> и <a class="agreement__link" href="/soglashenie" target="_blank">Пользовательским соглашением</a></p>
 											</div>
 											<form class="form-block__form form">
 												<div class="form__grid">
@@ -206,7 +216,7 @@
 											<div class="form-block__content">
 												<h3 class="form-block__heading">Звучит отлично?</h3>
 												<p class="form-block__descr">Не теряй времени и оставляй заявку на бесплатный урок.</p>
-												<p class="form-block__agreement agreement">Нажимая кнопку «Отправить» вы соглашаетесь<br/> с <a class="agreement__link" href="#" target="_blank">Политикой конфиденциальности</a> и <a class="agreement__link" href="#" target="_blank">Пользовательским соглашением</a></p>
+												<p class="form-block__agreement agreement">Нажимая кнопку «Отправить» вы соглашаетесь<br/> с <a class="agreement__link" href="/legal/policy" target="_blank">Политикой конфиденциальности</a> и <a class="agreement__link" href="/soglashenie" target="_blank">Пользовательским соглашением</a></p>
 											</div>
 											<form class="form-block__form form">
 												<div class="form__grid">
@@ -292,34 +302,34 @@
 					</div>
 					<div class="structure__bg structure__bg_left"></div>
 					<div class="structure__bg structure__bg_right"></div>
-				</section>
-				<div class="structure-form">
-					<div class="grid">
-						<div class="grid__row">
-							<div class="grid__col grid__col_xs-12 grid__col_md-12">
-								<div class="form-block">
-									<div class="form-block__inner">
-										<div class="form-block__content">
-											<h3 class="form-block__heading">Освободить себе 2 часа в сутки проще, чем вы думаете!</h3>
-											<p class="form-block__descr">Проверим?</p>
-											<p class="form-block__agreement agreement">Нажимая кнопку «Отправить» вы соглашаетесь<br/> с <a class="agreement__link" href="#" target="_blank">Политикой конфиденциальности</a> и <a class="agreement__link" href="#" target="_blank">Пользовательским соглашением</a></p>
-										</div>
-										<form class="form-block__form form">
-											<div class="form__grid">
-												<div class="form__field field"><label class="field__inner">
-														<div class="field__label">Имя</div><input class="field__input input" required="required" placeholder="Укажите ваше имя" type="text" />
-													</label></div>
-												<div class="form__field field"><label class="field__inner">
-														<div class="field__label">Телефон</div><input class="field__input input" required="required" type="tel" placeholder="+7 (___) ___-__-__" data-input-mask="data-input-mask" />
-													</label></div><button class="form__button button button_white" href="#">Отправить</button>
+					<div class="structure-form">
+						<div class="grid">
+							<div class="grid__row">
+								<div class="grid__col grid__col_xs-12 grid__col_md-12">
+									<div class="form-block">
+										<div class="form-block__inner">
+											<div class="form-block__content">
+												<h3 class="form-block__heading">Освободить себе 2 часа в сутки проще, чем вы думаете!</h3>
+												<p class="form-block__descr">Проверим?</p>
+												<p class="form-block__agreement agreement">Нажимая кнопку «Отправить» вы соглашаетесь<br/> с <a class="agreement__link" href="/legal/policy" target="_blank">Политикой конфиденциальности</a> и <a class="agreement__link" href="/soglashenie" target="_blank">Пользовательским соглашением</a></p>
 											</div>
-										</form>
+											<form class="form-block__form form">
+												<div class="form__grid">
+													<div class="form__field field"><label class="field__inner">
+															<div class="field__label">Имя</div><input class="field__input input" required="required" placeholder="Укажите ваше имя" type="text" />
+														</label></div>
+													<div class="form__field field"><label class="field__inner">
+															<div class="field__label">Телефон</div><input class="field__input input" required="required" type="tel" placeholder="+7 (___) ___-__-__" data-input-mask="data-input-mask" />
+														</label></div><button class="form__button button button_white" href="#">Отправить</button>
+												</div>
+											</form>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 				<section class="characteristic" id="characteristic">
 					<div class="grid">
 						<div class="grid__row">
@@ -418,13 +428,13 @@
 												</svg>
 												<div class="card-ghost__inner">
 													<h3 class="card-ghost__title">Подписывайся на наш instagram</h3>
-													<p class="card-ghost__descr">у нас интересный и нужный контент для родителей</p><a class="card-ghost__button button button_red" href="https://www.instagram.com/urokiru/" target="_blank">Подписаться</a>
+													<p class="card-ghost__descr">у нас интересный и нужный контент для родителей</p><a class="card-ghost__button button button_red" href="https://instagram.com/domashka.school" target="_blank">Подписаться</a>
 												</div>
 											</div>
 										</div>
 										<div class="card-ghost__content">
 											<h3 class="card-ghost__title">Подарим 2 урока в подарок</h3>
-											<p class="card-ghost__descr">если сделаешь пост у себя в instagram и отметишь нас <a href="https://www.instagram.com/urokiru/">@urokiru</a> с хештегом <a href="https://www.instagram.com/explore/tags/urokiru/">#urokiru</a></p>
+											<p class="card-ghost__descr">если сделаешь пост у себя в instagram и отметишь нас <a href="https://instagram.com/domashka.school" target="_blank">@domashka.school</a> с хештегом <a href="https://www.instagram.com/explore/tags/domashka.school/">#domashkaschool</a></p>
 										</div>
 									</div>
 								</div>
@@ -434,7 +444,7 @@
 											<div class="form-block__content">
 												<h3 class="form-block__heading">Есть сомнения или остались вопросы?</h3>
 												<p class="form-block__descr">Оставляй заявку и мы перезвоним вам в течение 5-ти минут!</p>
-												<p class="form-block__agreement agreement">Нажимая кнопку «Отправить» вы соглашаетесь<br/> с <a class="agreement__link" href="#" target="_blank">Политикой конфиденциальности</a> и <a class="agreement__link" href="#" target="_blank">Пользовательским соглашением</a></p>
+												<p class="form-block__agreement agreement">Нажимая кнопку «Отправить» вы соглашаетесь<br/> с <a class="agreement__link" href="/legal/policy" target="_blank">Политикой конфиденциальности</a> и <a class="agreement__link" href="/soglashenie" target="_blank">Пользовательским соглашением</a></p>
 											</div>
 											<form class="form-block__form form">
 												<div class="form__grid">
@@ -463,14 +473,14 @@
 									<div class="footer__grid">
 										<div class="footer__logo"><svg>
 												<use xlink:href="img/svgSprite.svg#domashka__logo"></use>
-											</svg></div><a class="footer__social" href="https://www.instagram.com/urokiru/" target="_blank"><svg class="footer__social-icon">
+											</svg></div><a class="footer__social" href="https://instagram.com/domashka.school" target="_blank"><svg class="footer__social-icon">
 												<use xlink:href="img/svgSprite.svg#icon__socials_ig"></use>
 											</svg>
 											<p class="footer__social-text">Подписывайтесь на instagram</p>
 										</a>
 										<div class="footer__info">
-											<div class="footer__info-links"><a class="footer__info-link" href="#" target="_blank">Пользовательское соглашение</a><a class="footer__info-link" href="#" target="_blank">Политика конфиденциальности</a></div>
-											<p class="footer__info-copy">2021 © Название фирмы</p>
+											<div class="footer__info-links"><a class="footer__info-link" href="/soglashenie" target="_blank">Пользовательское соглашение</a><a class="footer__info-link" href="/legal/policy" target="_blank">Политика конфиденциальности</a></div>
+											<p class="footer__info-copy">2021 © ООО «Эвотека»<br>ИНН 1658201149</p>
 										</div>
 									</div>
 								</div>
@@ -551,9 +561,12 @@
 			<div class="hystmodal__wrap">
 				<div class="hystmodal__window modal" role="dialog" aria-modal="true">
 					<div class="modal__header">
-						<h2 class="modal__heading">Спасибо за заявку</h2><svg class="modal__close" data-hystclose="true">
+						<h2 class="modal__heading">Спасибо за заявку</h2><svg class="modal__close" data-hystclose="true">
 							<use xlink:href="img/svgSprite.svg#icon__cross"></use>
 						</svg>
+					</div>
+					<div class="modal__body">
+						<p class="modal__text">Господа, перспективное планирование выявляет срочную потребность позиций, занимаемых участниками в отношении поставленных задач.</p>
 					</div>
 				</div>
 			</div>

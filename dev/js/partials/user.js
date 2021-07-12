@@ -11,13 +11,15 @@ window.onload = function() {
 	}
 
 	// scroll
-	document.querySelectorAll('a.main-nav__link[href^="#"]').forEach(anchor => {
-		anchor.addEventListener('click', function (e) {
-			e.preventDefault();
-			document.querySelector(this.getAttribute('href')).scrollIntoView({
-				behavior: 'smooth'
-			});
+	$('a.main-nav__link[href^="#"]').on('click', function() {
+		let href = $(this).attr('href');
+		$('html, body').animate({
+			scrollTop: $(href).offset().top
+		}, {
+			duration: 500,
+			easing: "swing"
 		});
+		return false;
 	});
 	
 	//inputmask
@@ -30,5 +32,12 @@ window.onload = function() {
 	//modal
 	const modals = new HystModal({
 		linkAttributeName: "data-hystmodal"
+	});
+	
+	// cookies
+	let cookiesPanel = document.querySelector('.cookies-message'),
+		cookiesButton = document.querySelector('.cookies-message__button');
+	cookiesButton.addEventListener('click', function () {
+		cookiesPanel.remove()
 	});
 };

@@ -30,11 +30,11 @@
 		align-self: center;
 		display: flex;
 		grid-area: logo;
-		height: 24px;
-		width: 211px;
+		height: 20px;
+		width: 210px;
 		@media (min-width: $screen-md) {
 			height: 32px;
-			width: 295px;
+			width: 336px;
 		}
 		svg {
 			height: 100%;

@@ -40,6 +40,15 @@
 	&__agreement {
 		margin-top: 48px;
 	}
+	&__body {
+		margin-top: 24px;
+	}
+	&__text {
+		font-size: 16px;
+		font-weight: normal;
+		line-height: 150%;
+		margin: 16px 0 0 0;
+	}
 }
 .hystmodal__shadow {
 	background: rgba(0, 0, 0, .25);

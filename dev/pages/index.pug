@@ -2,10 +2,13 @@ extends ../pug/layout_default.pug
 
 block variables
 
-block meta
-	title Главная страница
-
 block content
+	.cookies-message
+		.cookies-message__inner
+			svg.cookies-message__icon
+				use(xlink:href='img/svgSprite.svg#icon__cookies')
+			.cookies-message__text Продолжая пользоваться сайтом вы соглашаетесь с #[a.cookies-message__link(href='/cookies') условиями использования файлов cookie]
+		.button.button_red.cookies-message__button Принять условия
 	section.hero
 		.hero__inner
 			.grid
@@ -28,9 +31,9 @@ block content
 								button.form__button.button.button_white(href='#') Отправить
 							.agreement
 								| Нажимая кнопку «Отправить» вы соглашаетесь с 
-								a.agreement__link(href='#') Политикой конфиденциальности
+								a.agreement__link(href='/legal/policy' target='_blank') Политикой конфиденциальности
 								|  и 
-								a.agreement__link(href='#') Пользовательским соглашением
+								a.agreement__link(href='/soglashenie' target='_blank') Пользовательским соглашением
 	section#about.about
 		.grid
 			.grid__row
@@ -158,16 +161,16 @@ block content
 					], 'structure__step structure__step_5')
 		.structure__bg.structure__bg_left
 		.structure__bg.structure__bg_right
-	.structure-form
-		.grid
-			.grid__row
-				.grid__col.grid__col_xs-12.grid__col_md-12
-					+form-block([
-						{
-							heading: 'Освободить себе 2 часа в сутки проще, чем вы думаете!',
-							descr: 'Проверим?'
-						}
-					])
+		.structure-form
+			.grid
+				.grid__row
+					.grid__col.grid__col_xs-12.grid__col_md-12
+						+form-block([
+							{
+								heading: 'Освободить себе 2 часа в сутки проще, чем вы думаете!',
+								descr: 'Проверим?'
+							}
+						])
 	section#characteristic.characteristic
 		.grid
 			.grid__row
@@ -249,10 +252,10 @@ block content
 									.card-ghost__inner
 										h3.card-ghost__title Подписывайся на наш instagram
 										p.card-ghost__descr у нас интересный и нужный контент для родителей
-										a.card-ghost__button.button.button_red(href='https://www.instagram.com/urokiru/' target='_blank') Подписаться
+										a.card-ghost__button.button.button_red(href='https://instagram.com/domashka.school' target='_blank') Подписаться
 							.card-ghost__content
 								h3.card-ghost__title Подарим 2 урока в подарок
-								p.card-ghost__descr если сделаешь пост у себя в instagram и отметишь нас #[a(href='https://www.instagram.com/urokiru/') @urokiru] с хештегом #[a(href='https://www.instagram.com/explore/tags/urokiru/') #urokiru]
+								p.card-ghost__descr если сделаешь пост у себя в instagram и отметишь нас #[a(href='https://instagram.com/domashka.school' target='_blank') @domashka.school] с хештегом #[a(href='https://www.instagram.com/explore/tags/domashka.school/') #domashkaschool]
 					.price__action
 						+form-block([
 							{
