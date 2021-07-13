@@ -1,5 +1,7 @@
 'use strict';
 
+let thanks;
+
 window.onload = function() {
 	// page-nav
 	let menuTriggers = document.querySelectorAll('.header__menu, .page__darker, .main-nav__link, .side-nav__button'),
@@ -33,9 +35,9 @@ window.onload = function() {
 	const modals = new HystModal({
 		linkAttributeName: "data-hystmodal"
 	});
-	let thanks = function () {
+	thanks = function () {
 		modals.open('#thanks')
-	}
+	};
 	
 	// cookies
 	const cookieEl = document.querySelector('.cookies-message');
