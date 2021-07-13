@@ -1,12 +1,4 @@
-//- Стандартный шаблон страницы
-block variables
-
-- var isDeploy = true
-
-if isDeploy === true
-	- var pageAddress = '/domashka'
-else
-	- var pageAddress = ''
+//- Шаблон для страницы-документа
 
 include mixins.pug
 
@@ -24,33 +16,21 @@ html(class='no-js', lang='ru-RU')
 		meta(name='robots', content='index, follow')
 		meta(name='theme-color', content='#000000')
 
-		link(rel='icon', type='image/png', href='img/favicon/favicon-32x32.png', sizes='32x32')
-
 		block meta
-			title Школьная Домашка
-			meta(name='description', content='')
-			meta(name='keywords', content='')
+			title page title
+
+		block favicon
+			link(rel='icon', type='image/png', href='../img/favicon/favicon-32x32.png', sizes='32x32')
 
 		block head
-			link(rel='stylesheet', href='css/style.css')
+			link(rel='stylesheet', href='../css/style.css')
 			link(rel="preconnect", href="https://fonts.googleapis.com")
 			link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
 			link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Commissioner:wght@300;400;700&display=swap")
-	body
-		noscript У вас отключен JavaScript. Это пугает.
-		
+	body.doc
 		.page
-			.page__nav
-				include ../pug/layout_parts_nav.pug
-			.page__header
-				include ../pug/layout_parts_header.pug
-			.page__main
-				block content
-			.page__footer
-				include ../pug/layout_parts_footer.pug
-			.page__darker
-
-		include ../pug/layout_parts_modal.pug
-					
-		script(src='js/main.js')
-		block scripts
+			.page__doc
+				.grid
+					.grid__row
+						.grid__col.grid__col_xs-12.grid__col_md-10.col-offset__md-1.grid__col_lg-8.col-offset__lg-2
+							block content

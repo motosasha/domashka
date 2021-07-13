@@ -55,6 +55,9 @@ body {
 	@media (min-width: $screen-lg) {
 		background: url("../img/bg__organic.svg") no-repeat center top 2250px, #f5f5f5;
 	}
+	&.doc {
+		background: white;
+	}
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {

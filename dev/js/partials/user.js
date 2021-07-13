@@ -33,11 +33,30 @@ window.onload = function() {
 	const modals = new HystModal({
 		linkAttributeName: "data-hystmodal"
 	});
+	let thanks = function () {
+		modals.open('#thanks')
+	}
+	//thanks();
 	
 	// cookies
-	let cookiesPanel = document.querySelector('.cookies-message'),
-		cookiesButton = document.querySelector('.cookies-message__button');
-	cookiesButton.addEventListener('click', function () {
-		cookiesPanel.remove()
-	});
+	const cookieEl = document.querySelector('.cookies-message');
+	const okEl = document.querySelector('.cookies-message__button');
+	let cookies = () => {
+		if (!Cookies.get('hide-cookie') || Cookies.get('hide-cookie') === 'false') {
+			setTimeout(() => {
+				cookieEl.style.display = 'flex';
+			}, 1000);
+			Cookies.set('hide-cookie', 'false', {
+				expires: 14
+			});
+			console.log(0)
+		}
+		okEl.addEventListener('click', () => {
+			cookieEl.style.display = 'none';
+			Cookies.set('hide-cookie', 'true', {
+				expires: 14
+			});
+		});
+	}
+	cookies();
 };
