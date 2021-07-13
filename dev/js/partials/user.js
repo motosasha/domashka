@@ -36,7 +36,6 @@ window.onload = function() {
 	let thanks = function () {
 		modals.open('#thanks')
 	}
-	//thanks();
 	
 	// cookies
 	const cookieEl = document.querySelector('.cookies-message');
@@ -49,7 +48,6 @@ window.onload = function() {
 			Cookies.set('hide-cookie', 'false', {
 				expires: 14
 			});
-			console.log(0)
 		}
 		okEl.addEventListener('click', () => {
 			cookieEl.style.display = 'none';
