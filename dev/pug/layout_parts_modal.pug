@@ -4,6 +4,19 @@
 	{title: 'Хочу пробный урок', id: 'tester'}
 ])
 
+.hystmodal(aria-hidden='true' id='pay')
+	.hystmodal__wrap
+		.hystmodal__window.modal(role='dialog' aria-modal='true')
+			.modal__header
+				h2.modal__heading Выберите нужное количество уроков
+				svg.modal__close(data-hystclose='true')
+					use(xlink:href='img/svgSprite.svg#icon__cross')
+			.modal__body
+				.modal__list
+					a.button.button_white(href='#') 1 день — 500 ₽
+					a.button.button_white(href='#') 10 дней — 4 500 ₽
+					a.button.button_white(href='#') 20 дней — 9 000 ₽
+
 .hystmodal(aria-hidden='true' id='thanks')
 	.hystmodal__wrap
 		.hystmodal__window.modal(role='dialog' aria-modal='true')
