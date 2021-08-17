@@ -35,17 +35,17 @@
 		align-self: center;
 		display: flex;
 		grid-area: logo;
-		height: 24px;
+		height: 40px;
 		justify-content: center;
 		justify-self: center;
-		width: 252px;
+		width: 192px;
 		@media (min-width: $screen-sm) {
 			align-self: center;
 			justify-self: start;
 		}
 		@media (min-width: $screen-md) {
-			height: 32px;
-			width: 336px;
+			height: 48px;
+			width: 230px;
 		}
 		svg {
 			height: 100%;
