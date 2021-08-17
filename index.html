@@ -10,8 +10,13 @@
 		<meta name="format-detection" content="email=no">
 		<meta name="HandheldFriendly" content="true">
 		<meta name="robots" content="index, follow">
-		<meta name="theme-color" content="#000000">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
 		<link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="img/favicon/site.webmanifest">
+		<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#00a300">
+		<meta name="theme-color" content="#ffffff">
 		<title>Школьная Домашка</title>
 		<meta name="description" content="">
 		<meta name="keywords" content="">
@@ -397,9 +402,9 @@
 										<div class="card__content">
 											<div class="card__row">
 												<div class="card__free">
-													<p class="card__label">Пробный урок</p>
-													<p class="card__text card__text_red">бесплатно</p>
-												</div><a class="card__button button button_red" data-hystmodal="#tester">Хочу пробный урок</a>
+													<p class="card__label">Начинаем заниматься</p>
+													<p class="card__text card__text_red">прямо сейчас</p>
+												</div><a class="card__button button button_red" data-hystmodal="#pay">Оплатить</a>
 											</div>
 											<div class="card__row">
 												<div class="card__items">
@@ -554,6 +559,20 @@
 						</div>
 					</form>
 					<div class="modal__agreement agreement">Нажимая кнопку «Отправить» вы соглашаетесь с <a class="agreement__link" href="#">Политикой конфиденциальности</a> и <a class="agreement__link" href="#">Пользовательским соглашением</a></div>
+				</div>
+			</div>
+		</div>
+		<div class="hystmodal" aria-hidden="true" id="pay">
+			<div class="hystmodal__wrap">
+				<div class="hystmodal__window modal" role="dialog" aria-modal="true">
+					<div class="modal__header">
+						<h2 class="modal__heading">Выберите нужное количество уроков</h2><svg class="modal__close" data-hystclose="true">
+							<use xlink:href="img/svgSprite.svg#icon__cross"></use>
+						</svg>
+					</div>
+					<div class="modal__body">
+						<div class="modal__list"><a class="button button_white" href="#">1 день — 500 ₽</a><a class="button button_white" href="#">10 дней — 4 500 ₽</a><a class="button button_white" href="#">20 дней — 9 000 ₽</a></div>
+					</div>
 				</div>
 			</div>
 		</div>
