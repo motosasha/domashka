@@ -86,4 +86,34 @@
 			width: 100%;
 		}
 	}
+	&__phone {
+		align-items: center;
+		color: #4b4d52;
+		display: flex;
+		margin-right: 32px;
+	}
+	&__phone-icon {
+		height: 32px;
+		margin-right: 8px;
+		width: 32px;
+		@media (min-width: $screen-lg) {
+			height: 40px;
+			width: 40px;
+		}
+	}
+	&__phone-text {
+		color: inherit;
+		font-family: var(--font-accent);
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 125%;
+		text-align: center;
+		transition: color .125s ease;
+		@media (min-width: $screen-lg) {
+			font-size: 24px;
+		}
+	}
+	&__phone:hover &__phone-text {
+		color: var(--color-green);
+	}
 }

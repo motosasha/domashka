@@ -32,4 +32,27 @@
 	&__button + &__button{
 		margin-top: 16px;
 	}
+	&__phone {
+		align-items: center;
+		color: #4b4d52;
+		display: flex;
+		margin-bottom: 24px;
+	}
+	&__phone-icon {
+		height: 32px;
+		margin-right: 8px;
+		width: 32px;
+	}
+	&__phone-text {
+		color: inherit;
+		font-family: var(--font-accent);
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 125%;
+		text-align: center;
+		transition: color .125s ease;
+	}
+	&__phone:hover &__phone-text {
+		color: var(--color-green);
+	}
 }

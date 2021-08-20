@@ -15,9 +15,13 @@ header.header
 								{link: 'Стоимость', href: '#price'}
 							])
 						.header__buttons
+							a.header__phone(href='tel:89953315385')
+								svg.header__phone-icon
+									use(xlink:href='img/svgSprite.svg#icon__phone')
+								span.header__phone-text 8 (995) 331-53-85
 							a.header__button.button.button_red(data-hystmodal="#contacts") Связаться с нами
-							a.header__button.button.button_green(href='#') Регистрация
-							a.header__button.button.button_white(href='#') Вход
+							//-a.header__button.button.button_green(href='#') Регистрация
+							//-a.header__button.button.button_white(href='#') Вход
 						.header__menu
 							svg
 								use(xlink:href='img/svgSprite.svg#icon__menu')
